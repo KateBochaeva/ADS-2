@@ -22,7 +22,6 @@ uint64_t fact(uint16_t n) {
     return 1;
   else
     return n*fact(n-1);
-
 }
 
 double calcItem(double x, uint16_t n) {
@@ -38,14 +37,14 @@ double expn(double x, uint16_t count) {
 
 double sinn(double x, uint16_t count) {
   double sum = 0;
-  for (int i = 1; i <= count/2; i++)
+  for (int i = 1; i <= count/2+1; i++)
     sum += calcItem(x, i*2-1)*pown(-1, i+1);
   return sum;
 }
 
 double cosn(double x, uint16_t count) {
   double sum = 0;
-  for (int i = 0; i <= count/2; i++)
+  for (int i = 0; i <= count/2+1; i++)
     sum += calcItem(x, i*2)*pown(-1, i);
   return sum;
 }
