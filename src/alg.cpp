@@ -4,8 +4,14 @@
 
 
 double pown(double value, uint16_t n) {
-for (int i=1; i<n; i++)
-  value*=value;
+  if (n>0)
+    for (int i=1; i<n; i++)
+      value*=value;
+  else
+    for (int i=0; i<n; i++)
+      value/=value;
+  if (n==0)
+    value=1;
   return value;
 }
 
