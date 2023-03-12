@@ -4,13 +4,15 @@
 
 
 double pown(double value, uint16_t n) {
-  double umnosh=value;
-  if (n > 0)
+  double umnosh = value;
+  if (n > 0){
     for (int i = 1; i < n; i++)
       umnosh *= value;
-  else
+  }
+  else{
     for (int i = 0; i < n; i++)
       umnosh /= value;
+  }
   if (n == 0)
     umnosh = 1;
   return umnosh;
@@ -37,14 +39,14 @@ double expn(double x, uint16_t count) {
 
 double sinn(double x, uint16_t count) {
   double sum = 0;
-  for (int i = 1; i <= count/2; i++)
+  for (int i = 1; i < count/2; i++)
     sum += calcItem(x, i*2-1)*pown(-1, i);
   return sum;
 }
 
 double cosn(double x, uint16_t count) {
   double sum = 0;
-  for (int i = 0; i <= count/2; i++)
+  for (int i = 0; i < count/2; i++)
     sum += calcItem(x, i*2)*pown(-1, i);
   return sum;
 }
