@@ -4,15 +4,16 @@
 
 
 double pown(double value, uint16_t n) {
+  double umnosh=value;
   if (n>0)
     for (int i=1; i<n; i++)
-      value*=value;
+      umnosh*=value;
   else
     for (int i=0; i<n; i++)
-      value/=value;
+      umnosh/=value;
   if (n==0)
-    value=1;
-  return value;
+    umnosh=1;
+  return umnosh;
 }
 
 uint64_t fact(uint16_t n) {
