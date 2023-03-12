@@ -44,7 +44,7 @@ double sinn(double x, uint16_t count) {
 
 double cosn(double x, uint16_t count) {
   double sum = 0;
-  for (int i = 0; i <= count/2+1; i++)
+  for (int i = 0; i <= count; i++)
     sum += calcItem(x, i*2)*pown(-1, i);
   return sum;
 }
