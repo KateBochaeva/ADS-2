@@ -37,8 +37,8 @@ double expn(double x, uint16_t count) {
 
 double sinn(double x, uint16_t count) {
   double sum = 0;
-  for (int i = 1; i < count/2; i++)
-    sum += calcItem(x, i*2-1)*pown(-1, i+1);
+  for (int i = 1; i < count/2-1; i++)
+    sum += calcItem(x, i*2-1)*pown(-1, i-1);
   return sum;
 }
 
