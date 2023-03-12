@@ -43,8 +43,8 @@ double sinn(double x, uint16_t count) {
 }
 
 double cosn(double x, uint16_t count) {
-  double sum = 0;
-  for (int i = 0; i < count; i++)
+  double sum = 1;
+  for (int i = 2; i <= count; i++)
     sum += calcItem(x, i*2-2)*pown(-1, i);
   return sum;
 }
