@@ -30,21 +30,21 @@ double calcItem(double x, uint16_t n) {
 
 double expn(double x, uint16_t count) {
   double sum=0;
-  for (int i=0; i<count; i++)
-    sum+=calcItem(x,count);
+  for (int i=0; i<=count; i++)
+    sum+=calcItem(x,i);
   return sum;
 }
 
 double sinn(double x, uint16_t count) {
   double sum=0;
   for (int i=1; i<count/2; i++)
-    sum+=calcItem(x,count*2-1);
+    sum+=calcItem(x,i*2-1);
   return sum;
 }
 
 double cosn(double x, uint16_t count) {
   double sum=0;
   for (int i=0; i<count/2; i++)
-    sum+=calcItem(x,count*2);
+    sum+=calcItem(x,i*2);
   return sum;
 }
